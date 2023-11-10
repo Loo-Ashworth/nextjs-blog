@@ -20,6 +20,12 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+
+      <section className={utilStyles.headingMd}>
+        <Link href='/movieinfo' className={utilStyles.headingLg}>Movie Info</Link>
+      </section>
+      <br />
+
       <section className={utilStyles.headingMd}>
         <p>Hi, im Louis, Look at my smug avatar...</p>
         <Link href='/posts/first-post'>First Post</Link>
@@ -40,6 +46,6 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
 
-    </Layout>
+    </Layout >
   );
 }

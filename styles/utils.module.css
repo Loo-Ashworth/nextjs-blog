@@ -50,3 +50,8 @@
 .lightText {
     color: #666;
 }
+
+.searchForm {
+    display: flex;
+    align-items: center;
+}
