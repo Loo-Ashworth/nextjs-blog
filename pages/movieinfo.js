@@ -4,9 +4,15 @@ import { useRouter } from 'next/navigation'
 export default function MovieInfo() {
     const router = useRouter()
 
+    let query;
+    const userInputHandler = (value) => {
+        console.log(value)
+        query = value;
+    }
+
     const submitHandler = (e) => {
         e.preventDefault()
-        router.push('/movieinfo/results')
+        router.push('/movieinfo/results?query=' + query)
     }
 
     return (
@@ -16,7 +22,7 @@ export default function MovieInfo() {
             <h6>Welcome to Movie Info, what movie do you want to find out about?</h6>
             <section>
                 <br />
-                <form><input type='text'></input><br />
+                <form><input className="govuk-input" type='text' onChange={(event) => userInputHandler(event.target.value)}></input><br />
                     <br />
                     <button className="govuk-button" onClick={submitHandler} data-module="govuk-button">
                         Get Info!
