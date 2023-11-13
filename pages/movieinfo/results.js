@@ -16,7 +16,7 @@ export default function Results({ results }) {
     return (
         <Layout>
             {results.results.map((result) => (
-                <div>
+                <div key={result.id} >
                     <h1>Title: <em>{result.original_title}</em></h1>
                     <br />
                     <h6>Overview:</h6><br />
