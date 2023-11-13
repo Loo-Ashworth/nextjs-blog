@@ -5,9 +5,6 @@ import { useRouter } from 'next/router';
 export default function Results({ results }) {
     const router = useRouter()
 
-    console.log("Results is:")
-    console.log(results)
-
     const queryHandler = (e) => {
         e.preventDefault()
         router.push('/movieinfo')
@@ -31,8 +28,9 @@ export default function Results({ results }) {
         </Layout>)
 }
 
-// export async function getServerSideProps(context) {
-//     let query = context.query.query
+
+// APP Api Implementation"
+// export async function getServerSideProps() {
 //     const req = await fetch('http://localhost:3000/api/movieapi')
 //     const response = await req.json()
 //     console.log(response)
@@ -52,7 +50,6 @@ export async function getServerSideProps(context) {
 
     const req = await fetch(url, options)
     const response = await req.json()
-    console.log(response)
 
     return {
         props: { results: response }

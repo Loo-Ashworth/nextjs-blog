@@ -6,7 +6,6 @@ export default function MovieInfo() {
 
     let query;
     const userInputHandler = (value) => {
-        console.log(value)
         query = value;
     }
 
